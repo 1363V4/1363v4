@@ -426,10 +426,10 @@ kbd {
   --h6-color: #afbbc4;
   --muted-color: hsl(205deg, 10%, 50%);
   --muted-border-color: #1f2d38;
-  --primary: hsl(195deg, 85%, 41%);
-  --primary-hover: hsl(195deg, 80%, 50%);
-  --primary-focus: rgba(16, 149, 193, 0.25);
-  --primary-inverse: #fff;
+  --primary: #e53935;
+  --primary-hover: #f44336;
+  --primary-focus: rgba(229, 57, 53, 0.25);
+  --primary-inverse: #FFF;
   --secondary: hsl(205deg, 15%, 41%);
   --secondary-hover: hsl(205deg, 10%, 50%);
   --secondary-focus: rgba(115, 130, 140, 0.25);

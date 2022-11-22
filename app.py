@@ -9,7 +9,7 @@ def index():
 	
 @app.route("/app_1", methods=('GET', 'POST'))
 def app_1():
-	output = ""
+	output = "place"
 	if request.method == 'POST':
 		input = request.form['input']
 		answers = {
