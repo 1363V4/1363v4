@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="static/css/pico.min.css">
+    <title>{% block title %} {% endblock %} - 1363V4</title>
+</head>
+<body>
+    <nav class="container-fluid">
+		<ul>
+			<li><strong><a href="{{ url_for('index') }}">1363V4</a></strong></li>
+			<li>{{ self.title() }}</li>
+		</ul>
+		<ul>
+			<li><a href="{{ url_for('app_1') }}">App 1</a></li>
+		</ul>
+	</nav>
+	
+	<main class="container">
+		<div>
+			{% block content %} {% endblock %}
+		</div>
+	</main>
+</body>
+</html>

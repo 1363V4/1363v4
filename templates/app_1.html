@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} App 1 {% endblock %}
+
+{% block content %}
+		<div class="grid">
+			<div></div>
+			<div></div>
+			<input type="text" 
+				   name="input"
+				   placeholder="Your input here"
+				   value="{{ request.form['input'] }}"
+				   required=True></input>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="grid">
+			<div></div>
+			<div></div>
+			<button type="submit">Submit</button>
+			<div></div>
+			<div></div>
+		</div>	
+    </form>
+{% endblock %}
