@@ -9,7 +9,6 @@ def index():
 	
 @app.route("/app_1", methods=('GET', 'POST'))
 def app_1():
-	output = "_"
 	if request.method == 'POST':
 		input = request.form['input']
 		answers = {
@@ -20,8 +19,7 @@ def app_1():
 			output = answers[input]
 		except:
 			output = "Bad input."
-		output = "yes"
-		return render_template('app_1.html', output=output)
+		flash(output)
 		
-	return render_template('app_1.html', output=output)
+	return render_template('app_1.html')
 	
