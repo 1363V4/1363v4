@@ -9,9 +9,9 @@ def index():
 	
 @app.route("/app_1", methods=('GET', 'POST'))
 def app_1():
-	output = "place"
+	output = ""
 	if request.method == 'POST':
-		input = request.form['input']
+		input = request.args.get('input')
 		answers = {
 			'Sopra': "Steria",
 			'Eva': "BSSI !",
