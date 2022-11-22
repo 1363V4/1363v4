@@ -23,9 +23,11 @@
 			<div></div>
 		</div>
 	</form>
-	<div>
-		{% for message in get_flashed_messages() %}
-			<div><b>{{ message }}</b></div>
-		{% endfor %}
+	<div class="grid">
+		<div></div>
+		<div></div>
+		<div><b>{{ message }}</b></div>
+		<div></div>
+		<div></div>
 	</div>
 {% endblock %}

@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+	return render_template('index.html')
 	
 @app.route("/app_1", methods=('GET', 'POST'))
 def app_1():
-	flash("fuck")
+	msg="_"
 	if request.method == 'POST':
 		input = request.form['input']
 		answers = {
@@ -20,7 +20,6 @@ def app_1():
 			msg = answers[input]
 		except:
 			msg = "Bad input."
-		flash(msg)
 		
-	return render_template('app_1.html')
+	return render_template('app_1.html', message=msg)
 	
