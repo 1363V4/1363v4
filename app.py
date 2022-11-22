@@ -16,10 +16,10 @@ def app_1():
 			'Eva': "BSSI !",
 		}
 		try:
-			output = answers[input]
+			msg = answers[input]
 		except:
-			output = "Bad input."
-		flash(output)
+			msg = "Bad input."
+		flash(msg)
 		
 	return render_template('app_1.html')
 	
