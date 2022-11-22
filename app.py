@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, url_for, flash
-from utils import check_reliable, validate_deck
 
 
 app = Flask(__name__)
