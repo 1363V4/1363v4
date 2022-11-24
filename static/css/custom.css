@@ -1,0 +1,26 @@
+/* Indigo Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #3949ab;
+  --primary-hover: #303f9f;
+  --primary-focus: rgba(57, 73, 171, 0.125);
+  --primary-inverse: #FFF;
+}
+
+/* Red Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #e53935;
+  --primary-hover: #f44336;
+  --primary-focus: rgba(229, 57, 53, 0.25);
+  --primary-inverse: #FFF;
+}
+
+/* Red (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}

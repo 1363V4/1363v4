@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="static/css/pico.css">
+	<link rel="shortcut icon" href="static/img/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+	<link rel="stylesheet" href="static/css/custom.css">
     <title>{% block title %} {% endblock %} - 1363V4</title>
 </head>
 <body>
@@ -14,7 +16,12 @@
 			<li>{{ self.title() }}</li>
 		</ul>
 		<ul>
-			<li><a href="{{ url_for('app_1') }}">App 1</a></li>
+		<details role="list">
+			<summary aria-haspopup="listbox">Apps</summary>
+			<ul role="listbox">
+				<li><a href="{{ url_for('app_1') }}">App 1</a></li>
+			</ul>
+		</details>
 		</ul>
 	</nav>
 	
