@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Quiz {% endblock %}
+
+{% block content %}
+	<div class="grid">
+		<div></div>
+		<div>
+			Bienvenue dans le Quizz Sopra ! <br>
+			Ce quizz vous donnera une estimation de votre cyber. <br>
+			Le quizz ne prend que 5 minutes ! <br>
+			<br>
+			<div class="grid">
+				<div></div>
+				<div>
+					<a href="{{url_for('quiz_questions')}}" ><button type="submit">Go !</button></a>
+				</div>
+				<div></div>
+			</div>
+		</div>
+		<div></div>
+	</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} Quiz {% endblock %}
+
+{% block content %}
+    <h1>Quiz</h1>
+    <form method="POST">
+    <h4>Existant</h4>
+        <div class="grid">
+            <div>
+                J'ai écrit une PSSI
+            </div>
+            <div>
+                <fieldset>
+                    <label for="oui">
+                    <input type="radio" id="oui" name="pssi" value="oui" checked>
+                    Oui
+                    </label>
+                    <label for="non">
+                    <input type="radio" id="non" name="pssi" value="non">
+                    Non
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div>
+                Je connais mon parc informatique...
+            </div>
+            <div>
+                <fieldset>
+                    <label for="know_4">
+                    <input type="radio" id="know_4" name="know" value="4" checked>
+                    à 100%
+                    </label>
+                    <label for="know_3">
+                    <input type="radio" id="know_3" name="know" value="3">
+                    PC, serveurs, mais pas les téléphones
+                    </label>
+                    <label for="know_2">
+                    <input type="radio" id="know_2" name="know" value="2">
+                    je crois qu'il y a un Excel quelque part
+                    </label>
+                    <label for="know_1">
+                    <input type="radio" id="know_1" name="know" value="1">
+                    pas du tout
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            <div></div>
+            <div></div>
+            <button type="submit">Envoyer</button>
+            <div></div>
+            <div></div>
+        </div>
+    </form>
+{% endblock %}
