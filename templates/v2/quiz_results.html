@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Quiz {% endblock %}
+
+{% block content %}
+    <div class="banner">
+        <h1>Quiz DCP</h1>
+    </div>
+    <div class="space"></div>
+    <h2>Résultat : {{ message }}</h2>
+    <progress value={{ score }} max="100"></progress>
+    <h6>Score : {{ score }} / 100</h6>
+    <div class="space"></div>
+    <div class="container">
+        <article>
+            <h4>Demandez un audit flash !</h4>
+            <p><em>Nos équipes vous contacteront dans les plus brefs délais</em><p>
+            <form class="grid">
+                <input type="text" id="company" name="company" placeholder="Entreprise" required>
+                <input type="text" id="mail" name="mail" placeholder="Adresse mail" required>
+                <button type="submit">Envoyer</button>
+            </form>
+        </article>
+    </div>
+{% endblock %}

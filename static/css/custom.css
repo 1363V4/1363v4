@@ -35,3 +35,22 @@
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
 }
+
+h1 {
+  color: white;
+}
+
+.banner {
+  padding: 3rem;
+  background-image: url("../img/banner.png");
+  background-size: cover;
+}
+
+.space {
+  padding: 2rem;
+}
+
+.line {
+  padding: 0.1rem;
+  background-color: var(--primary);
+}

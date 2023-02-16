@@ -19,16 +19,15 @@
 		<details role="list">
 			<summary aria-haspopup="listbox">Apps</summary>
 			<ul role="listbox">
-				<li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+				<li><a href="{{ url_for('quiz_v1') }}">Quiz v1</a></li>
+				<li><a href="{{ url_for('quiz_v2') }}">Quiz v2</a></li>
 			</ul>
 		</details>
 		</ul>
 	</nav>
 	
 	<main class="container">
-		<div>
-			{% block content %} {% endblock %}
-		</div>
+		{% block content %} {% endblock %}
 	</main>
 </body>
 </html>

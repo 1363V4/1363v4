@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} Quiz {% endblock %}
+
+{% block content %}
+	<div class="banner">
+		<h1>Quiz DCP</h1>
+	</div>
+	<div class="space"></div>
+	<div>
+		Bienvenue dans le Quiz Sopra ! 
+		<br>
+		Ce quiz vous donnera une estimation de votre gestion des Données à Caractère Personnel (DCP). 
+		<br>
+		Le quiz ne prend que 5 minutes ! 
+		<br>
+		<div class="space"></div>
+		<div class="grid">
+			<div></div>
+			<div>
+				<a href="{{url_for('quiz_questions_v2')}}" ><button type="submit">Go !</button></a>
+			</div>
+			<div></div>
+		</div>
+	</div>
+{% endblock %}
