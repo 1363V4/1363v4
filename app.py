@@ -63,5 +63,6 @@ def lrp():
     _leg1 = "?"
     _leg2 = "?"
     if request.method == 'POST':
-        pass
+        _leg1 = "pif"
+        _leg2 = "pouf"
     return render_template('lrp.html', leg1=_leg1, leg2=_leg2)
