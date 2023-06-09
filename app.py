@@ -56,3 +56,11 @@ def quiz_questions_v2():
             message=msg
             )
     return render_template('v2/quiz_questions.html')
+
+# LRP
+@app.route("/lrp", methods=('GET', 'POST'))
+def lrp():
+    _leg1 = "?", _leg2 = "?"
+    if request.method == 'POST':
+        pass
+    return render_template('lrp.html', leg1=_leg1, leg2=_leg2)
