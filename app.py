@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for, flash
 from settings import scores, msgs
+from random import randint
 
 
 app = Flask(__name__)
@@ -63,6 +64,6 @@ def lrp():
     _leg1 = "?"
     _leg2 = "?"
     if request.method == 'POST':
-        _leg1 = "pif"
-        _leg2 = "pouf"
+        _leg1 = randint(1, 215)
+        _leg2 = randint(1, 215)
     return render_template('lrp.html', leg1=_leg1, leg2=_leg2)
