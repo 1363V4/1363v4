@@ -80,7 +80,7 @@ def jml():
         _etapes += 1
         _ville_d = request.form['ville']
         if _ville_d == _ville_a:
-            win = True
+            _win = True
     return render_template(
         'jml.html', 
         ville_d=_ville_d, 
