@@ -74,5 +74,5 @@ def jml():
     _ville_d = "quat"
     _villes = ['Ville 1', 'Ville 2', 'Ville 3', 'Ville 4']
     if request.method == 'POST':
-        _ville_d = request.form['button_text']
+        _ville_d = request.form['ville']
     return render_template('jml.html', ville_d=_ville_d, villes=_villes)
