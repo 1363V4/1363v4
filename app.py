@@ -82,9 +82,9 @@ def jml():
         if _ville_d == _ville_a:
             _win = True
     return render_template(
-        'jml.html', 
-        ville_d=_ville_d, 
-        ville_a=_ville_a, 
-        villes=_villes, 
+        'jml.html',
+        ville_d=_ville_d,
+        ville_a=_ville_a,
+        villes=_villes,
         etapes=_etapes,
         win=_win)
