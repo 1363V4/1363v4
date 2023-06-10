@@ -64,6 +64,6 @@ def lrp():
     _leg1 = "?"
     _leg2 = "?"
     if request.method == 'POST':
-        _leg1 = randint(1, 215)
-        _leg2 = randint(1, 215)
+        _leg1 = randint(1, 105)
+        _leg2 = randint(1, 105)
     return render_template('lrp.html', leg1=_leg1, leg2=_leg2)
