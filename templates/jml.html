@@ -12,11 +12,9 @@
         </summary>
         <ul role="listbox">
             <form method="POST">
-                <li>
-                    <button type="submit" name="button_text" value="Ville 1">Ville 1</button>
-                </li>
-                <li><a>J2</a></li>
-                <li><a>J3</a></li>
+                {% for ville in villes %}
+                    <li><button type="submit" name="ville" value="{{ ville }}">{{ ville }}</button></li>
+                {% endfor %}
             </form>
         </ul>
     </details>
