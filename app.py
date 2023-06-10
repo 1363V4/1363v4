@@ -61,8 +61,8 @@ def quiz_questions_v2():
 # LRP
 @app.route("/lrp", methods=('GET', 'POST'))
 def lrp():
-    _leg1 = "?"
-    _leg2 = "?"
+    _leg1 = 13
+    _leg2 = 63
     if request.method == 'POST':
         _leg1 = randint(1, 105)
         _leg2 = randint(1, 105)
