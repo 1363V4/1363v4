@@ -71,9 +71,9 @@ def lrp():
 # JML
 @app.route("/jml", methods=('GET', 'POST'))
 def jml():
-    _ville_d = "quat"
-    _ville_a = "quat"
-    _villes = ['Ville 1', 'Ville 2', 'Ville 3', 'Ville 4']
+    _ville_d = "Montpellier"
+    _ville_a = "Barcelone"
+    _villes = ['Barcelone', 'Bethléem', 'Chengdu', 'Fès', 'Heidelberg', 'Kos', 'Louisville', 'Obninsk', 'Palerme', 'Rio de Janeiro', 'Sherbrooke', 'Tibériade', 'Tlemcen']
     _etapes = 0
     _win = False
     if request.method == 'POST':
