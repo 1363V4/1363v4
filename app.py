@@ -72,7 +72,19 @@ def lrp():
 @app.route("/jml", methods=('GET', 'POST'))
 def jml():
     _ville_d = "quat"
+    _ville_a = "quat"
     _villes = ['Ville 1', 'Ville 2', 'Ville 3', 'Ville 4']
+    _etapes = 0
+    _win = False
     if request.method == 'POST':
+        _etapes += 1
         _ville_d = request.form['ville']
-    return render_template('jml.html', ville_d=_ville_d, villes=_villes)
+        if _ville_d == _ville_a:
+            win = True
+    return render_template(
+        'jml.html', 
+        ville_d=_ville_d, 
+        ville_a=_ville_a, 
+        villes=_villes, 
+        etapes=_etapes,
+        win=_win)

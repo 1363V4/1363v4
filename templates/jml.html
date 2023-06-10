@@ -3,6 +3,19 @@
 {% block title %} LRP {% endblock %}
 
 {% block content %}
+{% if win %}
+    <dialog open>
+        <article>
+        <header>
+            <a href="#close" aria-label="Close" class="close"></a>
+            Congratulations!
+        </header>
+        <p>
+            A winner is you.
+        </p>
+        </article>
+  </dialog>
+{% endif %}
 <div class="grid">
     <div></div>
     <details role="list">
@@ -20,5 +33,9 @@
     </details>
     <button>Ville X</button>
     <div></div>
+</div>
+<div>
+<p>Essayez d'atteindre {{ ville_a }}</p>
+<p>Nombre d'étapes : {{ étapes }}</p>
 </div>
 {% endblock %}
