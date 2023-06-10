@@ -73,6 +73,5 @@ def lrp():
 def jml():
     _ville_d = "quat"
     if request.method == 'POST':
-        input = request.form
-        _ville_d = "deux" + str(input)
+        _ville_d = request.form['button_text']
     return render_template('jml.html', ville_d=_ville_d)
