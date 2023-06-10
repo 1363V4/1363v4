@@ -3,6 +3,13 @@
 {% block title %} LRP {% endblock %}
 
 {% block content %}
+    <div class="grid">
+        <div></div>
+        <img src="/static/img/champs/champ_{{leg1}}.webp">
+        <div></div>
+        <img src="/static/img/champs/champ_{{leg2}}.webp">
+        <div></div>
+    </div>
 	<form method="POST">
         <div class="grid">
             <div></div>
@@ -12,11 +19,4 @@
 			<div></div>
 		</div>
 	</form>
-    <div class="grid">
-        <div></div>
-        <img src="/static/img/champs/champ_{{leg1}}.webp">
-        <div></div>
-        <img src="/static/img/champs/champ_{{leg2}}.webp">
-        <div></div>
-    </div>
 {% endblock %}
