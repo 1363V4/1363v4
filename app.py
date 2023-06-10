@@ -67,3 +67,10 @@ def lrp():
         _leg1 = randint(1, 105)
         _leg2 = randint(1, 105)
     return render_template('lrp.html', leg1=_leg1, leg2=_leg2)
+
+# JML
+@app.route("/jml", methods=('GET', 'POST'))
+def lrp():
+    if request.method == 'POST':
+        pass
+    return render_template('jml.html')

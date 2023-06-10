@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} LRP {% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div class="grid">
+        <div></div>
+        <details role="list">
+            <summary aria-haspopup="listbox" role="button">
+            Ville D
+            </summary>
+            <ul role="listbox">
+                <li><a>J1</a></li>
+                <li><a>J2</a></li>
+                <li><a>J3</a></li>
+            </ul>
+        </details>
+        <div></div>
+        <button>Ville A</button>
+        <div></div>
+    </div>
+</form>
+{% endblock %}
