@@ -71,6 +71,7 @@ def lrp():
 # JML
 @app.route("/jml", methods=('GET', 'POST'))
 def jml():
+    _ville_d = "un"
     if request.method == 'POST':
-        pass
-    return render_template('jml.html')
+        _ville_d = "deux"
+    return render_template('jml.html', ville_d=_ville_d)
