@@ -70,7 +70,7 @@ def lrp():
 
 # JML
 @app.route("/jml", methods=('GET', 'POST'))
-def lrp():
+def jml():
     if request.method == 'POST':
         pass
     return render_template('jml.html')
