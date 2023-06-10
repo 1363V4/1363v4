@@ -73,5 +73,6 @@ def lrp():
 def jml():
     _ville_d = "un"
     if request.method == 'POST':
-        _ville_d = "deux"
+        input = request.form
+        _ville_d = "deux" + input
     return render_template('jml.html', ville_d=_ville_d)

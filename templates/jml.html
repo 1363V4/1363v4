@@ -3,22 +3,22 @@
 {% block title %} LRP {% endblock %}
 
 {% block content %}
-<form method="POST">
-    <div class="grid">
-        <div></div>
-        <details role="list">
-            <summary aria-haspopup="listbox" role="button">
+<div class="grid">
+    <div></div>
+    <details role="list">
+        <form method="POST">
+        <summary aria-haspopup="listbox" role="button">
             <img src="/static/img/flags/flag-antarctica.png" width="30" height="30">
             {{ville_d}}
-            </summary>
+        </summary>
             <ul role="listbox">
                 <li><a>J1</a></li>
                 <li><a>J2</a></li>
                 <li><a>J3</a></li>
             </ul>
+        </form>
         </details>
         <button>Ville A</button>
         <div></div>
     </div>
-</form>
 {% endblock %}
