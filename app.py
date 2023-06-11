@@ -4,7 +4,7 @@ from random import randint, choice
 import os
 
 app = Flask(__name__)
-app.secret_key(os.getenv('secret_key'))
+app.secret_key = os.getenv('secret_key')
 
 # HOME
 @app.route("/")
