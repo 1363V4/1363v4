@@ -72,11 +72,11 @@ def lrp():
 @app.route("/jml", methods=('GET', 'POST'))
 def jml():
     _ville_a = None
+    _win = False
     if request.method == 'GET':
         _ville_d = choice([*twins])
         _ville_a = choice(twins[_ville_d])
         _etapes = 1
-        _win = False
     if request.method == 'POST':
         _ville_d = request.form['ville']
         try:
