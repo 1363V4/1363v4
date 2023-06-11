@@ -50,7 +50,7 @@ msgs = {
 }
 
 twins = {
-    '\U0001F600 London': [
+    'London': [
         'Paris',
         'New York City',
         'Tokyo',
