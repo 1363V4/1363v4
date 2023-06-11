@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, flash
-from settings import scores, msgs
-from random import randint
+from settings import scores, msgs, twins
+from random import randint, choice
 
 
 app = Flask(__name__)
@@ -71,14 +71,17 @@ def lrp():
 # JML
 @app.route("/jml", methods=('GET', 'POST'))
 def jml():
-    _ville_d = "Montpellier"
-    _ville_a = "Barcelone"
-    _villes = ['Barcelone', 'Bethléem', 'Chengdu', 'Fès', 'Heidelberg', 'Kos', 'Louisville', 'Obninsk', 'Palerme', 'Rio de Janeiro', 'Sherbrooke', 'Tibériade', 'Tlemcen']
-    _etapes = 0
+    _ville_d = choice(twins)
+    _ville_a = choice(twins[_ville_d])
+    _villes = twins[_ville_d]
+    _etapes = 1
     _win = False
     if request.method == 'POST':
-        _etapes += 1
         _ville_d = request.form['ville']
+        try:
+            _villes = twins[_ville_d]
+        except KeyError:
+            _villes = ['pas encore fait']
         if _ville_d == _ville_a:
             _win = True
     return render_template(

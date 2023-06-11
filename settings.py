@@ -48,3 +48,24 @@ msgs = {
         0: "Mauvais",
     }
 }
+
+twins = {
+    '\U0001F600 London': [
+        'Paris',
+        'New York City',
+        'Tokyo',
+        'Beijing',
+    ],
+    'Rome': [
+        'Paris',
+        'Athens',
+        'Madrid',
+        'Cairo',
+    ],
+    'Berlin': [
+        'Los Angeles',
+        'Moscow',
+        'Beijing',
+        'Istanbul',
+    ],
+}
