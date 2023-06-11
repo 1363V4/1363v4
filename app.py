@@ -71,7 +71,6 @@ def lrp():
 # JML
 @app.route("/jml", methods=('GET', 'POST'))
 def jml():
-    _ville_a = None
     _win = False
     _etapes = 1
     if request.method == 'GET':
@@ -80,12 +79,14 @@ def jml():
         _ville_a = choice(twins[_ville_d])
     if request.method == 'POST':
         _ville_d = request.form['ville']
+        _ville_a = vap
         try:
             _villes = twins[_ville_d]
         except KeyError:
             _villes = ['pas encore fait']
         if _ville_d == _ville_a:
             _win = True
+    vap = _ville_a
     return render_template(
         'jml.html',
         ville_d=_ville_d,
