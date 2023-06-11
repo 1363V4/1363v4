@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, flash
+from flask import Flask, render_template, request, url_for, flash, session
 from settings import scores, msgs, twins
 from random import randint, choice
 
@@ -77,9 +77,10 @@ def jml():
         _ville_d = choice([*twins])
         _villes = twins[_ville_d]
         _ville_a = choice(twins[_ville_d])
+        session['ville_a'] = _ville_a
     if request.method == 'POST':
         _ville_d = request.form['ville']
-        _ville_a = request.form['ville_a']
+        _ville_a = session.get('ville_a', None)
         try:
             _villes = twins[_ville_d]
         except KeyError:
