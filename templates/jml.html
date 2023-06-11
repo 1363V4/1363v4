@@ -37,6 +37,12 @@
 <div>
 <p>Essayez d'atteindre {{ ville_a }}</p>
 <p>Nombre d'étapes minimum : {{ etapes }}</p>
-<p>Actuel : {{ steps }}</p>
+<p>
+{{ ville_d }}
+{% for step in steps %}
+    -> {{ step }}
+{% endfor %}
+-> ? -> {{ ville_a }}
+</p>
 </div>
 {% endblock %}

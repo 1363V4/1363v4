@@ -85,6 +85,7 @@ def jml():
     if request.method == 'POST':
         session['tries'] += 1
         _ville_d = request.form['ville']
+        session['steps'] += [_ville_d]
         _ville_a = session.get('ville_a', None)
         try:
             _villes = twins[_ville_d]
