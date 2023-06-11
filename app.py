@@ -76,6 +76,7 @@ def jml():
     _etapes = 2
     if request.method == 'GET':
         _ville_d = choice([*twins])
+        session['ogd'] = _ville_d
         _villes = twins[_ville_d]
         _temp = choice(twins[_ville_d])
         _ville_a = choice(twins[_temp])
@@ -100,5 +101,6 @@ def jml():
         villes=_villes,
         etapes=_etapes,
         tries=session['tries'],
+        ogd=session['ogd'],
         steps=session['steps'],
         win=_win)
