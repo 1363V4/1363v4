@@ -79,14 +79,13 @@ def jml():
         _ville_a = choice(twins[_ville_d])
     if request.method == 'POST':
         _ville_d = request.form['ville']
-        _ville_a = vap
+        _ville_a = request.form['ville_a']
         try:
             _villes = twins[_ville_d]
         except KeyError:
             _villes = ['pas encore fait']
         if _ville_d == _ville_a:
             _win = True
-    vap = _ville_a
     return render_template(
         'jml.html',
         ville_d=_ville_d,
