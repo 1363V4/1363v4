@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, url_for, flash, session
 from settings import scores, msgs, twins
 from random import randint, choice
-
+import os
 
 app = Flask(__name__)
+app.secret_key(os.getenv('secret_key'))
 
 # HOME
 @app.route("/")
