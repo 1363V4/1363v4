@@ -71,6 +71,7 @@ def lrp():
 # JML
 @app.route("/jml", methods=('GET', 'POST'))
 def jml():
+    _ville_a = None
     if request.method == 'GET':
         _ville_d = choice([*twins])
         _ville_a = choice(twins[_ville_d])
