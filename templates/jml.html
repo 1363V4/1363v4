@@ -9,6 +9,7 @@
             <header>
                 A winner is you!
             </header>
+            <p>{{ tries }} essais</p>
             <a href="/jml" role="button">Play again</a>
         </article>
   </dialog>
@@ -36,5 +37,6 @@
 <div>
 <p>Essayez d'atteindre {{ ville_a }}</p>
 <p>Nombre d'étapes minimum : {{ etapes }}</p>
+<p>Actuel : {{ steps }}</p>
 </div>
 {% endblock %}

@@ -80,7 +80,10 @@ def jml():
         _temp = choice(twins[_ville_d])
         _ville_a = choice(twins[_temp])
         session['ville_a'] = _ville_a
+        session['tries'] = 0
+        session['steps'] = []
     if request.method == 'POST':
+        session['tries'] += 1
         _ville_d = request.form['ville']
         _ville_a = session.get('ville_a', None)
         try:
@@ -95,4 +98,6 @@ def jml():
         ville_a=_ville_a,
         villes=_villes,
         etapes=_etapes,
+        tries=session['tries'],
+        steps=session['steps'],
         win=_win)
