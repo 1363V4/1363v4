@@ -79,7 +79,9 @@ def jml():
         session['ogd'] = _ville_d
         _villes = twins[_ville_d]
         _temp = choice(twins[_ville_d])
-        _ville_a = choice(twins[_temp])
+        _ville_a = _ville_d
+        while _ville_a == ville_d:
+            _ville_a = choice(twins[_temp])
         session['ville_a'] = _ville_a
         session['tries'] = 0
         session['steps'] = []
