@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, flash, session
+from flask import Flask, render_template, request, url_for, flash, session, redirect
 from settings import scores, msgs, twins
 from random import randint, choice
 import os
@@ -106,3 +106,7 @@ def jml():
         ogd=session['ogd'],
         steps=session['steps'],
         win=_win)
+
+@app.errorhandler(500)
+def handle_500_error(error):
+    return redirect('/jml'), 500
