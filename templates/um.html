@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Uno Magique {% endblock %}
+
+{% block content %}
+<form method="POST">
+    <input type="text" id="player" name="player" placeholder="Player name" required>
+    <div class="grid">
+        <div></div>
+		<div>
+            <button type="submit">Go !</button>
+		</div>
+		<div></div>
+	</div>
+</form>
+<div class="grid">
+    <div></div>
+    <img src="/static/img/champs/champ_69.webp">
+    {{ power }}
+    {{ players }}
+    <div></div>
+</div>
+{% endblock %}

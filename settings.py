@@ -146,3 +146,8 @@ twins = {
     'Edmonton': ['Calgary', 'Winnipeg', 'Saskatoon', 'Regina'],
     'Milan': ['Turin', 'Bologna', 'Naples', 'Florence']
 }
+
+powers = {
+    1: 'king',
+    2: 'sonic'
+}

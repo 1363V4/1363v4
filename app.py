@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, flash, session, redirect
-from settings import scores, msgs, twins
+from settings import scores, msgs, twins, powers
 from random import randint, choice
 import os
 
@@ -107,6 +107,24 @@ def jml():
         steps=session['steps'],
         win=_win)
 
-@app.errorhandler(500)
-def handle_500_error(error):
-    return redirect('/jml'), 500
+_powers = [*powers]
+# UM
+@app.route("/um", methods=('GET', 'POST'))
+def um():
+    _players = {}
+    _power = 0
+    if request.method == 'POST':
+        _player = request.form['player']
+        if _player == 'reset':
+            _powers = [*powers]
+        elif _powers:
+            _power = choice(_powers)
+            _powers.remove(_power)
+            _players[_player] = _power
+        else:
+            _power = 'no more powers!'
+    return render_template(
+        'um.html',
+        power=_power,
+        players=_players)
+
