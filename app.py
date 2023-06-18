@@ -107,10 +107,10 @@ def jml():
         steps=session['steps'],
         win=_win)
 
-_powers = [*powers]
 # UM
 @app.route("/um", methods=('GET', 'POST'))
 def um():
+    _powers = [*powers] 
     _players = {}
     _power = 0
     if request.method == 'POST':
@@ -127,4 +127,3 @@ def um():
         'um.html',
         power=_power,
         players=_players)
-
