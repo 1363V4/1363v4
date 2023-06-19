@@ -112,14 +112,16 @@ _players = {k: [] for k in powers}
 @app.route("/um", methods=('GET', 'POST'))
 def um():
     global _players
+    _reset = False
     if request.method == 'POST':
         _player = request.form['player']
         if _player == 'reset':
             _players = {k: [] for k in powers}
+            _reset = True
         else:
             _possible_powers = [k for k in _players if not _players[k]]
             _power = choice(_possible_powers)
-            _players[_power] += [str(_player)]
+            _players[_power] += [session.get('user_id')]
             _power_name = powers[_power][0]
             _power_desc = powers[_power][1]
             return render_template(
@@ -127,4 +129,5 @@ def um():
                 um_id=_power,
                 power_name=_power_name,
                 power_desc=_power_desc)
-    return render_template('um.html')
+    return render_template('um.html'
+        reset=_reset)
