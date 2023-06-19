@@ -124,6 +124,7 @@ def um():
             _power_desc = powers[_power][1]
             return render_template(
                 'um2.html',
+                um_id=_power,
                 power_name=_power_name,
                 power_desc=_power_desc)
     return render_template('um.html')
