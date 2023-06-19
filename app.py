@@ -117,7 +117,7 @@ def um():
         if _player == 'reset':
             _players = {k: [] for k in powers}
         else:
-            _possible_powers = [k for k in _players if len(_players[k]) == 2]
+            _possible_powers = [k for k in _players if not _players[k]]
             _power = choice(_possible_powers)
             _players[_power] += [str(_player)]
             _power_name = powers[_power][0]
