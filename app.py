@@ -128,7 +128,8 @@ def um():
                 'um2.html',
                 um_id=_power,
                 power_name=_power_name,
-                power_desc=_power_desc)
+                power_desc=_power_desc,
+                player_name=_player)
     return render_template(
         'um.html',
         reset=_reset)
