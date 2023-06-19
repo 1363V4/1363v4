@@ -115,7 +115,7 @@ def um():
     _reset = False
     if request.method == 'POST':
         _player = request.form['player']
-        if _player == 'reset':
+        if _player.lower() == 'reset':
             _players = {k: [] for k in powers}
             _reset = True
         else:

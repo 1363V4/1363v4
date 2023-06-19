@@ -3,21 +3,21 @@
 {% block title %} Uno Magique {% endblock %}
 
 {% block content %}
-{% if reset %}
-	<p>Reset success</p>
-{% endif %}
-<form method="POST">
-	<div class="grid">
-        <div></div>
-		<div>
-            <p>Attendez le signal !</p>
-		</div>
-		<div></div>
+<div class="grid">
+	<div></div>
+	<div>
+		<p>Attendez le signal !</p>
+		{% if reset %}
+		<p>Reset success</p>
+		{% endif %}
 	</div>
+	<div></div>
+</div>
+<form method="POST">
     <div class="grid">
         <div></div>
 		<div>
-            <input type="text" id="player" name="player" placeholder="Player name">
+            <input type="text" id="player" name="player" placeholder="Player name (facultatif)">
 		</div>
 		<div></div>
 	</div>
