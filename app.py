@@ -108,22 +108,20 @@ def jml():
         win=_win)
 
 # UM
+_players = {k: [] for k in powers}
 @app.route("/um", methods=('GET', 'POST'))
 def um():
-    _powers = [*powers] 
-    _players = {}
-    _power = 0
+    global _players
     if request.method == 'POST':
         _player = request.form['player']
         if _player == 'reset':
-            _powers = [*powers]
-        elif _powers:
-            _power = choice(_powers)
-            _powers.remove(_power)
-            _players[_player] = _power
+            _players = {k: [] for k in powers}
         else:
-            _power = 'no more powers!'
-    return render_template(
-        'um.html',
-        power=_power,
-        players=_players)
+            _possible_powers = [k for k in _players if len(_players[k]) == 1]
+            _power = choice(_possible_powers)
+            _players[_power] += [str(_player)]
+            return render_template(
+                'um2.html',
+                power=_power,
+                players=_players)
+    return render_template('um.html')

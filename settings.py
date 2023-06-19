@@ -148,6 +148,6 @@ twins = {
 }
 
 powers = {
-    1: 'king',
-    2: 'sonic'
+    'king': ['desc'],
+    'sonic': ['desc'],
 }
