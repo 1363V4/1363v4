@@ -148,6 +148,17 @@ twins = {
 }
 
 powers = {
-    'king': ['desc'],
-    'sonic': ['desc'],
+    'agile': ["L'Agile", "peut esquiver n'importe quel effet "],
+    'bomber': ["Bomber Man", "lorsqu'un autre joueur pose une carte chiffre sur le même chiffre, il pioche *(permanent)*"],
+    'chimiste': ["Le Chimiste Fou", "quand un joueur fait uno, il doit gagner un chi-fu-mi contre le chimiste fou et pioche deux cartes s'il perd *(permanent)*"],
+    'dalton': ["Le Dalton", "quand il pioche, le joueur peut consulter les 4 premières cartes"],
+    'fossoyeur': ["Le Fossoyeur", "peut échanger les cartes de sa main conrte autant de cartes du cimetière"],
+    'musclé': ["Le Musclé", "peut doubler la valeur d'un effet *(activable deux fois)*"],
+    'promoteur': ["Le Promoteur", "peut transformer une carte chiffre en carte de pioche"],
+    'roi': ["Le Roi", "peut interrompre le jeu pour poser une carte"],
+    'shotgun': ["Le Shotgun", "peut jouer deux cartes à la suite"],
+    'sonic': ["Sonic", "devient le centre de l'attention et joue entre les tours *(désactivable)*"],
+    'switcher': ["Le Switcher", "peut échanger sa main avec celle d'un autre joueur"],
+    'tricheur': ["Le Tricheur", "peut défausser une carte de sa main"],
+    'voyante': ["La Voyante", "peut forcer un joueur à révéler sa main"],
 }

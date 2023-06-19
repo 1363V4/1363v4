@@ -117,11 +117,13 @@ def um():
         if _player == 'reset':
             _players = {k: [] for k in powers}
         else:
-            _possible_powers = [k for k in _players if not _players[k]]
+            _possible_powers = [k for k in _players if len(_players[k]) == 2]
             _power = choice(_possible_powers)
             _players[_power] += [str(_player)]
+            _power_name = powers[_power][0]
+            _power_desc = powers[_power][1]
             return render_template(
                 'um2.html',
-                power=_power,
-                players=_players)
+                power_name=_power_name,
+                power_desc=_power_desc)
     return render_template('um.html')
