@@ -148,17 +148,17 @@ twins = {
 }
 
 powers = {
-    'agile': ["L'Agile", "Peut esquiver n'importe quel effet."],
+    'agile': ["L'Agile", "Peut esquiver n'importe quel effet (deux fois)."],
     'bomber': ["Bomber Man", "Lorsqu'un autre joueur pose une carte chiffre sur le même chiffre, il pioche (permanent)"],
     'chimiste': ["Le Chimiste Fou", "Quand un joueur fait uno, il doit gagner un chi-fu-mi contre le chimiste fou et pioche deux cartes s'il perd (permanent)"],
-    'dalton': ["Le Dalton", "Quand il pioche, le joueur peut consulter les 4 premières cartes."],
-    'fossoyeur': ["Le Fossoyeur", "Peut échanger les cartes de sa main conrte autant de cartes du cimetière."],
+    'dalton': ["Le Dalton", "Quand il pioche, le joueur peut consulter les 4 premières cartes et prendre celle de son choix (permanent)"],
+    'fossoyeur': ["Le Fossoyeur", "Peut échanger les cartes de sa main contre autant de dernières cartes du cimetière."],
     'muscle': ["Le Musclé", "Peut doubler la valeur d'un effet (activable deux fois)."],
     'promoteur': ["Le Promoteur", "Peut transformer une carte chiffre en carte de pioche."],
     'roi': ["Le Roi", "Peut interrompre le jeu pour poser une carte."],
-    'shotgun': ["Le Shotgun", "Peut jouer deux cartes à la suite."],
+    'shotgun': ["Le Shotgun", "Peut jouer deux cartes à la suite (deux fois)."],
     'sonic': ["Sonic", "Devient le centre de l'attention et joue entre les tours (désactivable)."],
     'switcher': ["Le Switcher", "Peut échanger sa main avec celle d'un autre joueur."],
-    'tricheur': ["Le Tricheur", "Peut défausser une carte de sa main."],
-    'voyante': ["La Voyante", "Peut forcer un joueur à révéler sa main."],
+    'tricheur': ["Le Tricheur", "Gagne lorsqu'il n'a qu'une carte mais doit Uno à deux cartes.."],
+    'voyante': ["La Voyante", "Tout le monde joue à découvert sauf elle."],
 }
