@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="/static/img/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-	<link rel="stylesheet" href="/static/css/custom.css">
-    <title>{% block title %} {% endblock %} - 1363V4</title>
-</head>
-<body>
-    <nav class="container-fluid">
-		<ul>
-			<li><strong><a href="{{ url_for('index') }}">1363V4</a></strong></li>
-			<li>/</li>
-			<li>{{ self.title() }}</li>
-		</ul>
-		<ul>
-		<details role="list">
-			<summary aria-haspopup="listbox">Apps</summary>
-			<ul role="listbox">
-				<li><a href="{{ url_for('quiz_v1') }}">Quiz v1</a></li>
-				<li><a href="{{ url_for('quiz_v2') }}">Quiz v2</a></li>
-				<li><a href="{{ url_for('lrp') }}">LRP</a></li>
-				<li><a href="{{ url_for('jml') }}">JML</a></li>
-				<li><a href="{{ url_for('um') }}">UM</a></li>
-			</ul>
-		</details>
-		</ul>
-	</nav>	
-	<main class="container">
-		{% block content %} {% endblock %}
-	</main>
-</body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Website Mockup</title>
+		<link rel="shortcut icon" href="/static/img/favicon.png">
+		<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+		<link rel="stylesheet" href="/static/css/custom.css">
+    	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+	    <header>
+	        <div id="logo">LOGO</div>
+	        <nav>
+	            <ul>
+	                <li><a href="#">Log in</a></li>
+	                <li><a href="#">Sign up</a></li>
+	            </ul>
+	        </nav>
+	    </header>
+
+	    <main>
+	        <section class="big-text">Big text</section>
+
+	        <section class="content">
+	            <h1>Heading</h1>
+	            <p>Paragraph of text</p>
+	            <button type="button">Button</button>
+	        </section>
+
+	        <div class="decorative-break"></div>
+	    </main>
+
+	    <footer>Footer text</footer>
+
+	</body>
 </html>

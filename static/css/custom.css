@@ -1,56 +1,58 @@
-/* Red Light scheme (Default) */
-/* Can be forced with data-theme="light" */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  --primary: #e53935;
-  --primary-hover: #d32f2f;
-  --primary-focus: rgba(229, 57, 53, 0.125);
-  --primary-inverse: #FFF;
-}
-
-/* Red Dark scheme (Auto) */
-/* Automatically enabled if user has Dark mode enabled */
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --primary: #e53935;
-    --primary-hover: #f44336;
-    --primary-focus: rgba(229, 57, 53, 0.25);
-    --primary-inverse: #FFF;
-  }
-}
-
-/* Red Dark scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
-  --primary: #e53935;
-  --primary-hover: #f44336;
-  --primary-focus: rgba(229, 57, 53, 0.25);
-  --primary-inverse: #FFF;
-}
-
-/* Red (Common styles) */
 :root {
-  --form-element-active-border-color: var(--primary);
-  --form-element-focus-color: var(--primary-focus);
-  --switch-color: var(--primary-inverse);
-  --switch-checked-background-color: var(--primary);
+  --rich-black: #0e131f;
+  --delft-blue: #38405f;
+  --english-violet: #59546c;
+  --cadet-gray: #8b939c;
+  --imperial-red: #ff0035;
 }
 
-h1 {
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--rich-black);
   color: white;
 }
 
-.banner {
-  padding: 3rem;
-  background-image: url("../img/banner.png");
-  background-size: cover;
+nav ul {
+  list-style-type: none;
 }
 
-.space {
-  padding: 2rem;
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
 }
 
-.line {
-  padding: 0.1rem;
-  background-color: var(--primary);
+main {
+  background-color: var(--delft-blue);
+  color: white;
+  padding: 20px;
+}
+
+.big-text {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.content h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.decorative-break {
+  height: 100px;
+  background-color: var(--english-violet);
+}
+
+footer {
+  background-color: var(--cadet-gray);
+  color: var(--imperial-red);
+  padding: 10px;
+  text-align: center;
 }
