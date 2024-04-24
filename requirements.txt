@@ -1,2 +1,7 @@
 Flask
 Gunicorn
+jinja2_fragments
+htmlgenerator
+networkx
+matplotlib
+chess
