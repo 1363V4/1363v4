@@ -1,15 +1,23 @@
-{% extends 'base.html' %}y
+{% extends "base.html" %}
 
 {% block content %}
-<main>
-    <section class="big-text">Big text</section>
-
-    <section class="content">
-        <h1>Heading</h1>
-        <p>Paragraph of text</p>
-        <button type="button">Button</button>
-    </section>
-
-    <div class="decorative-break"></div>
-</main>
+<div>
+    <p>this is my test website</p>
+    <p>i use it to learn web app basics</p>
+    <p>some of it is in french i'm sorry</p>
+    <p>reach me on x <b>@merelyacat</b></p>
+    <p>green projects are the most polished projects</p>
+    <form 
+    hx-boost="true"
+    hx-target="main"
+    action="/"
+    method="post">
+        <button class="finished" name="button" value="jumelio" type="submit">jumelio</button>
+        <button class="finished" name="button" value="echecs" type="submit">chess</button>
+        <button name="button" value="triangle" type="submit">triangle</button>
+        <button class="finished" name="button" value="circle" type="submit">circle</button>
+        <button name="button" value="story" type="submit">story</button>
+        <button name="button" value="turten" type="submit">turten</button>
+    </form>
+</div>
 {% endblock %}

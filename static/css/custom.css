@@ -1,58 +1,159 @@
+[data-theme="light"] {
+  --primary: #c3c3ca;
+  --primary-hover: #abc1ff;
+  --primary-focus: #0094C6;
+  --primary-inverse: #005E7C;
+}
+
 :root {
-  --rich-black: #0e131f;
-  --delft-blue: #38405f;
-  --english-violet: #59546c;
-  --cadet-gray: #8b939c;
-  --imperial-red: #ff0035;
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
+p {
+  text-align: justify;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--rich-black);
-  color: white;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-main {
-  background-color: var(--delft-blue);
-  color: white;
-  padding: 20px;
-}
-
-.big-text {
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-
-.content h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.decorative-break {
-  height: 100px;
-  background-color: var(--english-violet);
+body {
+  max-width: fit-content;
+  margin-inline: auto;
+  padding: 2rem;
 }
 
 footer {
-  background-color: var(--cadet-gray);
-  color: var(--imperial-red);
-  padding: 10px;
   text-align: center;
+  font-size: x-small;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.text_div {
+  max-width: 33rem;
+}
+
+article {
+  font-style: italic;
+  background-color: #c3c3ca;
+  box-shadow: 6px 6px var(--primary);
+}
+
+#map {
+  font-style: italic;
+  padding-inline: 20%;
+  margin: 0 auto;
+}
+
+#map button {
+  padding: 0;
+  background-color: var(--primary);
+}
+
+#b1 {
+  width: 20%;
+  background-color: var(--primary);
+}
+
+iframe {
+  border:0; 
+  height: 90vh;
+  width: 90vw;
+}
+
+.flag_img {
+  display: inline;
+}
+
+.result_lose {
+  color: red;
+  font-size: x-large;
+  font-weight: 900;
+  text-align: center;
+}
+
+.result_win {
+  color: green;
+  font-size: x-large;
+  font-weight: 900;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.square {
+  display: block;
+  margin-inline: auto;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid black;
+}
+
+.square.white {
+  background-color: #f0d9b5;
+}
+
+.square.black {
+  background-color: #b58863;
+}
+
+.square.selected {
+  background-color: #9863b5;
+}
+
+.square.possible {
+  background-color: #be90d7;
+}
+
+.square.win {
+  background-color: #078d10;
+}
+
+.square.lose {
+  background-color: #cd1f42;
+}
+
+.chess_img {
+  width: -webkit-fill-available;
+}
+
+.circle_container {
+  position: relative;
+  margin-inline: auto;
+  width: 13rem;
+  height: 13rem;
+}
+
+.circle {
+  position: absolute;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+
+.half_circle {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+#key_div button {
+  background-color: black;
+}
+
+#mode_div button {
+  background-color: orange;
+}
+
+.arrow {
+  width: 1rem;
+  display: inline;
+}
+
+button.finished {
+  background-color: rgb(42, 117, 42);
 }

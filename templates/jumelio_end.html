@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text_div">
+    <h1>result : {{ score }} / 5</h1>
+    <p>pas mal !</p>
+    <form 
+    hx-boost="true"
+    hx-target="main"
+    action="/jumelio"
+    method="get">
+    <div>
+        <button type="submit">play again</button>
+    </div>
+    </form>
+</div>
+{% endblock %}

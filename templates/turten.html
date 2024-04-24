@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>a homemade cypher</p>
+<p>will you manage to break it?</p>
+<div class="grid">
+  <div>
+    <label for="decode">Decode:</label>
+    <input 
+    type="text" id="decode" name="decode"
+    hx-post="/decode"
+    hx-target="#decoded"
+    >
+    <p id="decoded"></p>
+</div>
+<div>
+  <form
+  hx-post="/encode"
+  hx-target="#encoded"
+  >
+    <label for="encode">Encode:</label>
+    <input type="text" id="encode" name="encode">
+    <p id="encoded"></p>
+    <label>
+      <input type="checkbox" name="point" checked>
+      points
+    </label>
+  </form>
+</div>
+</div>
+{% endblock %}

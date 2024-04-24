@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>this is an idea for a mixup between <em>the shape of stories</em> and <em>the hero's journey</em></p>
+<p>for each "hero moment" (eg. call for adventure, defeat boss, return home etc) you randomly move up or down along the "mood" axis</p>
+{% for step in steps %}
+    {{ step | safe }}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text_div">
+    <b>Result : </b>
+    {{ result | safe }}
+    <b>Answer :</b>
+    <p>{{ answer | safe}}</p>
+    <b>Score :</b>
+    <p>{{ score }} / 5</p>
+    {% if map %}
+        <div id="map">
+            <form
+            hx-post="/jumelio"
+            hx-target="main">
+                <button type="submit" name="button" value="map">voir sur la carte</button>
+            </form>
+        </div>
+    {% endif %}
+    </article>
+    <form 
+    hx-boost="true"
+    hx-target="main"
+    action="/jumelio"
+    method="post">
+    <div>
+        <button type="submit" name="button" value="next">next</button>
+    </div>
+    </form>
+</div>
+{% endblock %}

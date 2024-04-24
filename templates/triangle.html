@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form 
+hx-boost="true"
+hx-target="main"
+action="/triangle"
+method="post">
+    <p>do you want a triangle?</p>
+    </div>
+    <div class="grid">
+        <div></div>
+        <button name="button" value="start" type="submit">yes please</button>
+        <div></div>
+    </div>
+</form>
+{% endblock %}

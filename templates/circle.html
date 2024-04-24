@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="circle_container">
+    <div id="circle" class="circle">
+      <img src="/static/img/circle/full_circle.svg">
+    </div>
+    <div id="half_circle" class="half_circle" style="filter: brightness(1.83)">
+      <img src="/static/img/circle/half_circle.svg">
+    </div>
+</div>
+<h1 id="scale">c major</h1>
+<div id="key_div" role="group">
+    <p>change key</p>
+    <button 
+    hx-get="/rotate_minus" 
+    hx-swap="outerHTML"
+    hx-target=".circle">
+        -
+    </button>
+    <button 
+    hx-get="/rotate_plus" 
+    hx-swap="outerHTML"
+    hx-target=".circle">
+        +
+    </button>
+</div>
+<div id="mode_div" role="group">
+    <p>change mode</p>
+    <button 
+    hx-get="/rotate_half_minus" 
+    hx-swap="outerHTML"
+    hx-target=".half_circle">
+        -
+    </button>
+    <button 
+    hx-get="/rotate_half_plus" 
+    hx-swap="outerHTML"
+    hx-target=".half_circle">
+        +
+    </button>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text_div">
+    <h6>le jeu des villes jumelles</h6>
+    <p>le but du jeu est de deviner en combien d'étapes aller d'une ville à une autre <b>en ne passant QUE par des villes jumelées entre elles</b></p>
+    <article>
+        <header>
+            exemple
+        </header>
+        on peut aller de <b>Lille</b> <img class="flag_img" src="/static/img/flags/fr.png"> à <b>San Francisco</b> <img class="flag_img" src="/static/img/flags/us.png"> en seulement <b>3 étapes</b>
+        <footer>
+            car <b>Lille</b> <img class="flag_img" src="/static/img/flags/fr.png"> est jumelée avec Erfurt <img class="flag_img" src="/static/img/flags/de.png">, elle-même jumelée avec Haifa <img class="flag_img" src="/static/img/flags/il.png">, elle-même jumelée avec <b>San Francisco</b> <img class="flag_img" src="/static/img/flags/us.png">.
+        </footer>
+    </article>
+    <b>serez-vous à la hauteur ???</b>
+    <p>vous avez <b>5 essais</b>. bonne chance !</p>
+    <p>les choix sont :</p>
+    <ul>
+        <li><b> pas possible</b></li>
+        <li><b>6 étapes ou moins</b></li>
+        <li><b>7 étapes ou plus</b></li>
+    </ul>
+    <form 
+    hx-boost="true"
+    hx-target="main"
+    action="/jumelio"
+    method="post">
+        <button type="submit" name="button" value="start">start game</button>
+    </form>
+</div>
+{% endblock %}
