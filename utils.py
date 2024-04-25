@@ -50,7 +50,7 @@ def alias_gmap(id):
     return msg
 
 def gmap(path):
-    api_key = "AIzaSyCdxnjBphEaFER2rhGLQTUX8-zDvYWYFOo"
+    api_key = "AIzaSyCdxnjBphEaFER2rhGLQTUX8-zDvYWYFOo" #removed
     params = f"origin={path.pop(0)}"
     params += f"&destination={path.pop()}"
     waypoints = '|'.join(city for city in path)
