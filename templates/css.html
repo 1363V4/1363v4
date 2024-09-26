@@ -3,7 +3,8 @@
 {% block content %}
 <p>css variables helper</p>
 <p>will return</p>
-<p>var(--var_1) * var(--var_root) + calc(var(--var_0) * (1 - var(--var_root)))</p>
+<p>var(--var_1) * var(--var_root)</p>
+<p>+ calc(var(--var_0) * (1 - var(--var_root)))</p>
 <hr>
 <div class="grid">
     <form
@@ -16,8 +17,9 @@
         <input type="text" id="var_1" name="var_1">
         <label for="var_2">Root Variable:</label>
         <input type="text" id="var_2" name="var_2">
+        <input type="submit" value="Run">
+        <p id="css_calc"></p>
     </form>
-    <p id="css_calc"></p>
 </div>
 </div>
 {% endblock %}
