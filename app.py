@@ -256,7 +256,7 @@ def css():
     return hx_boost_content("css.html")
 
 
-@app.route('/css_calc')
+@app.route('/css_calc', methods=['POST'])
 def css_calc():
     var_0 = request.values.get('var_0')
     var_1 = request.values.get('var_1')
