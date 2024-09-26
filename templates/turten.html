@@ -12,20 +12,20 @@
     hx-target="#decoded"
     >
     <p id="decoded"></p>
-</div>
-<div>
-  <form
-  hx-post="/encode"
-  hx-target="#encoded"
-  >
-    <label for="encode">Encode:</label>
-    <input type="text" id="encode" name="encode">
-    <p id="encoded"></p>
-    <label>
-      <input type="checkbox" name="point" checked>
-      points
-    </label>
-  </form>
-</div>
+  </div>
+  <div>
+    <form
+    hx-post="/encode"
+    hx-target="#encoded"
+    >
+      <label for="encode">Encode:</label>
+      <input type="text" id="encode" name="encode">
+      <p id="encoded"></p>
+      <label>
+        <input type="checkbox" name="point" checked>
+        points
+      </label>
+    </form>
+  </div>
 </div>
 {% endblock %}

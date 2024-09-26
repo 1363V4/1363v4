@@ -261,7 +261,7 @@ def css_calc():
     var_0 = request.values.get('var_0')
     var_1 = request.values.get('var_1')
     var_2 = request.values.get('var_2')
-    txt = f"var(--{var_1}) * var(--{var_2}) + calc(var(--{var_0}) * (1 - var(--{var_2})))"
+    txt = f"calc(var(--{var_1}) * var(--{var_2}) + var(--{var_0}) * (1 - var(--{var_2})))"
     return txt
 
 

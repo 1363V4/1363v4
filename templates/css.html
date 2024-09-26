@@ -3,23 +3,24 @@
 {% block content %}
 <p>css variables helper</p>
 <p>will return</p>
-<p>var(--var_1) * var(--var_root)</p>
-<p>+ calc(var(--var_0) * (1 - var(--var_root)))</p>
+<p>calc(var(--var_1) * var(--var_root)</p>
+<p>+ var(--var_0) * (1 - var(--var_root)))</p>
 <hr>
-<div class="grid">
-    <form
-    hx-post="/css_calc"
-    hx-target="#css_calc"
-    >
-        <label for="var_0">Variable 0:</label>
+<form
+hx-post="/css_calc"
+hx-target="#css_calc"
+>
+    <div> 
+        <label for="var_0">Variable 0: (when root is 0)</label>
         <input type="text" id="var_0" name="var_0">
-        <label for="var_1">Variable 1:</label>
+        <label for="var_1">Variable 1: (when root is 1)</label>
         <input type="text" id="var_1" name="var_1">
+    </div>
+    <div>
         <label for="var_2">Root Variable:</label>
         <input type="text" id="var_2" name="var_2">
         <input type="submit" value="Run">
         <p id="css_calc"></p>
-    </form>
-</div>
-</div>
+    </div>
+</form>
 {% endblock %}
