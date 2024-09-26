@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>css variables helper</p>
+<hr>
+<div class="grid">
+    <form
+    hx-post="/css_calc"
+    hx-target="#css_calc"
+    >
+        <label for="var_0">Variable 0:</label>
+        <input type="text" id="var_0" name="var_0">
+        <label for="var_1">Variable 1:</label>
+        <input type="text" id="var_1" name="var_1">
+        <label for="var_2">Root Variable:</label>
+        <input type="text" id="var_2" name="var_2">
+    </form>
+    <p id="css_calc"></p>
+</div>
+</div>
+{% endblock %}

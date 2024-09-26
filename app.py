@@ -41,6 +41,8 @@ def index():
                 return redirect(url_for('story'))
             case "turten":
                 return redirect(url_for('turten'))
+            case "css":
+                return redirect(url_for('css'))
             case _:
                 print("fuck")
 
@@ -247,6 +249,20 @@ def encode():
     for char in txt:
         out += [d_turten.get(char, char)]
     return ".".join(out) if point else "".join(out)
+
+
+@app.route('/css')
+def css():
+    return hx_boost_content("css.html")
+
+
+@app.route('/css_calc')
+def css_calc():
+    var_0 = request.values.get('var_0')
+    var_1 = request.values.get('var_1')
+    var_2 = request.values.get('var_2')
+    txt = f"var(--{var_1}) * var(--{var_2}) + calc(var(--{var_0}) * (1 - var(--{var_2})))"
+    return txt
 
 
 if __name__ == '__main__':
